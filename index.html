@@ -6,7 +6,7 @@
     <title>Transporte Amalfi | Movilidad Corporativa y Turística en RD</title>
     <meta name="description" content="Líderes en transporte empresarial en Santo Domingo. Traslado de personal, ejecutivos y eventos con puntualidad garantizada.">
     
-    <!-- Favicon (Emoji de bus como respaldo rápido) -->
+    <!-- Favicon con emoji de bus -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚌</text></svg>">
     
     <!-- Tailwind CSS -->
@@ -42,10 +42,15 @@
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
         html { scroll-behavior: smooth; }
         
-        /* Asegura que las imágenes de los buses se vean completas si es necesario */
-        .bus-img-container img {
+        /* Ajuste para que las fotos de los buses siempre luzcan bien */
+        .bus-card-img {
+            height: 280px;
+            width: 100%;
             object-fit: cover;
             object-position: center;
+        }
+        @media (min-width: 1024px) {
+            .bus-card-img { height: 320px; }
         }
     </style>
 </head>
@@ -75,6 +80,7 @@
                 </button>
             </div>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-amalfi-navy border-t border-amalfi-gold/20 p-4 space-y-4">
             <a href="#servicios" onclick="toggleMenu()" class="block text-white text-center py-2">Servicios</a>
             <a href="#flota" onclick="toggleMenu()" class="block text-white text-center py-2">Nuestra Flota</a>
@@ -100,14 +106,14 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="https://cotizacion.transporteamalfi.com/" target="_blank" class="px-8 py-4 bg-amalfi-gold hover:bg-amalfi-goldLight text-amalfi-navy font-bold rounded-xl transition-all shadow-xl text-center">Solicitar Presupuesto</a>
-                        <a href="https://wa.me/18099885237" target="_blank" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all border border-white/30 backdrop-blur-sm text-center">Hablar por WhatsApp</a>
+                        <a href="https://wa.me/18099885237" target="_blank" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all border border-white/30 backdrop-blur-sm text-center font-sans tracking-tight">Hablar por WhatsApp</a>
                     </div>
                 </div>
                 <div class="hidden lg:block relative group">
                     <div class="relative w-full h-[500px] bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
                         <img src="bus-principal.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" alt="Flota Amalfi Real">
-                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-amalfi-navy to-transparent">
-                            <p class="text-white text-sm font-medium">Unidades impecables y seguras para cada colaborador.</p>
+                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-amalfi-navy to-transparent text-center">
+                            <p class="text-white text-sm font-medium italic">Unidades impecables para cada trayecto corporativo.</p>
                         </div>
                     </div>
                 </div>
@@ -115,7 +121,7 @@
         </div>
     </section>
 
-    <!-- Trust Bar Actualizado -->
+    <!-- Trust Bar -->
     <div class="bg-white py-10 border-b">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">+1,000</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Clientes Felices</span></div>
@@ -125,139 +131,136 @@
         </div>
     </div>
 
-    <!-- Sectores Section Actualizada -->
+    <!-- Sectores Section -->
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Sectores que confían en nosotros</h2>
-                <h3 class="font-serif text-4xl text-amalfi-navy">Experiencia en diversas industrias</h3>
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Nuestra Experiencia</h2>
+                <h3 class="font-serif text-4xl text-amalfi-navy">Sectores que confían en nosotros</h3>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
                 <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
                     <span class="text-3xl">🏭</span>
-                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Industria & Manufactura</span>
+                    <span class="text-[10px] font-bold text-slate-600 leading-tight uppercase tracking-tight">Industria & Manufactura</span>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
                     <span class="text-3xl">📦</span>
-                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Comercio & Distribución</span>
+                    <span class="text-[10px] font-bold text-slate-600 leading-tight uppercase tracking-tight">Comercio & Distribución</span>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
                     <span class="text-3xl">🕊️</span>
-                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Sector Religioso & ONG</span>
+                    <span class="text-[10px] font-bold text-slate-600 leading-tight uppercase tracking-tight">Sector Religioso & ONG</span>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
                     <span class="text-3xl">🎓</span>
-                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Sector Educativo</span>
+                    <span class="text-[10px] font-bold text-slate-600 leading-tight uppercase tracking-tight">Sector Educativo</span>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
                     <span class="text-3xl">🏨</span>
-                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Hotelería & Turismo</span>
+                    <span class="text-[10px] font-bold text-slate-600 leading-tight uppercase tracking-tight">Hotelería & Turismo</span>
                 </div>
                 <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
                     <span class="text-3xl">✨</span>
-                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Organización de Eventos</span>
+                    <span class="text-[10px] font-bold text-slate-600 leading-tight uppercase tracking-tight">Organización de Eventos</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Grid con Emoji de Bus -->
+    <!-- Services Grid con Emoji 🚌 -->
     <section id="servicios" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Servicios Especializados</h2>
-                <h3 class="font-serif text-4xl text-amalfi-navy">Soluciones a su medida</h3>
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Lo que hacemos</h2>
+                <h3 class="font-serif text-4xl text-amalfi-navy">Servicios diseñados para la eficiencia</h3>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
-                    <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center mb-6">
+                    <div class="mb-6 flex items-center justify-center bg-white w-16 h-16 rounded-2xl shadow-sm">
                         <span class="text-4xl">🚌</span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Traslado de Personal</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Rutas programadas para zonas industriales y comerciales. Garantizamos que su equipo llegue a tiempo.</p>
+                    <p class="text-slate-500 font-light leading-relaxed">Rutas programadas para industrias y comercios. Garantizamos que su equipo llegue puntual a cada turno.</p>
                 </div>
                 <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
-                    <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center mb-6">
+                    <div class="mb-6 flex items-center justify-center bg-white w-16 h-16 rounded-2xl shadow-sm">
                         <span class="text-4xl">🚌</span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Transporte Ejecutivo</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Servicio VIP para directivos. Vehículos modernos y conductores profesionales para una movilidad impecable.</p>
+                    <p class="text-slate-500 font-light leading-relaxed">Servicio VIP para directivos y eventos especiales. Vehículos impecables y choferes profesionales.</p>
                 </div>
                 <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
-                    <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center mb-6">
+                    <div class="mb-6 flex items-center justify-center bg-white w-16 h-16 rounded-2xl shadow-sm">
                         <span class="text-4xl">🚌</span>
                     </div>
-                    <h4 class="text-xl font-bold mb-3">Eventos & Convenciones</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Logística de transporte para grupos masivos. Coordinamos cada detalle para que su evento sea un éxito.</p>
+                    <h4 class="text-xl font-bold mb-3">Eventos & Grupos</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Logística coordinada para giras, convenciones o actividades religiosas con atención al detalle.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Flota Section (Fotos más grandes y completas) -->
+    <!-- Flota Section (Diseño ajustado: Mas foto, info debajo) -->
     <section id="flota" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Nuestra Flota</h2>
                 <h3 class="font-serif text-4xl text-amalfi-navy mb-4">Unidades seguras para cada necesidad</h3>
-                <p class="text-slate-500 max-w-3xl mx-auto">Contamos con una flota moderna y segura diseñada para adaptarse a sus necesidades, desde traslados ejecutivos hasta transporte masivo.</p>
+                <p class="text-slate-500 max-w-3xl mx-auto font-light">Contamos con unidades modernas y seguras diseñadas para adaptarse a usted, desde traslados ejecutivos hasta transporte de grandes grupos.</p>
             </div>
+            
             <div class="grid md:grid-cols-3 gap-10">
                 <!-- Toyota Hiace -->
-                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
-                    <div class="h-80 bg-slate-100 bus-img-container overflow-hidden">
-                        <img src="bus-15.jpg" class="w-full h-full object-cover" alt="Toyota Hiace Amalfi 15 Pax">
-                    </div>
-                    <div class="p-8 flex-grow">
+                <div class="card-hover bg-white rounded-[2.5rem] overflow-hidden shadow-md border border-slate-100 flex flex-col h-full">
+                    <img src="bus-15.jpg" class="bus-card-img" alt="Toyota Hiace Amalfi 15 Pax">
+                    <div class="p-10 flex-grow">
                         <h4 class="font-bold text-2xl mb-1 text-amalfi-navy">Toyota Hiace</h4>
-                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em]">12–15 Pasajeros</span>
-                        <p class="text-sm text-slate-500 my-4 leading-relaxed italic">Fiabilidad y confort excepcional. Ideal para traslados ejecutivos y aeropuertos.</p>
-                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Toyota%20Hiace" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em] block mb-4">12–15 Pasajeros</span>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">Reconocida por su comodidad y eficiencia. Ideal para traslados ejecutivos, aeropuertos y movilidad urbana ágil.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Toyota%20Hiace" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2 border-t pt-6">Consultar disponibilidad →</a>
                     </div>
                 </div>
+
                 <!-- Toyota Coaster -->
-                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
-                    <div class="h-80 bg-slate-100 bus-img-container overflow-hidden">
-                        <img src="bus-30.jpg" class="w-full h-full object-cover" alt="Toyota Coaster Amalfi 30 Pax">
-                    </div>
-                    <div class="p-8 flex-grow">
+                <div class="card-hover bg-white rounded-[2.5rem] overflow-hidden shadow-md border border-slate-100 flex flex-col h-full">
+                    <img src="bus-30.jpg" class="bus-card-img" alt="Toyota Coaster Amalfi 30 Pax">
+                    <div class="p-10 flex-grow">
                         <h4 class="font-bold text-2xl mb-1 text-amalfi-navy">Toyota Coaster</h4>
-                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em]">25–30 Pasajeros</span>
-                        <p class="text-sm text-slate-500 my-4 leading-relaxed italic">Perfecto para transporte empresarial y excursiones grupales con gran durabilidad.</p>
-                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Toyota%20Coaster" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em] block mb-4">25–30 Pasajeros</span>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">Autobús mediano perfecto para transporte empresarial y excursiones. Destaca por su durabilidad y amplio espacio.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Toyota%20Coaster" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2 border-t pt-6">Consultar disponibilidad →</a>
                     </div>
                 </div>
+
                 <!-- Grandes Grupos -->
-                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
-                    <div class="h-80 bg-slate-100 bus-img-container overflow-hidden">
-                        <img src="bus-50.jpg" class="w-full h-full object-cover" alt="Hyundai Kia Amalfi 50 Pax">
-                    </div>
-                    <div class="p-8 flex-grow">
+                <div class="card-hover bg-white rounded-[2.5rem] overflow-hidden shadow-md border border-slate-100 flex flex-col h-full">
+                    <img src="bus-50.jpg" class="bus-card-img" alt="Autobús Gran Capacidad Amalfi 50 Pax">
+                    <div class="p-10 flex-grow">
                         <h4 class="font-bold text-2xl mb-1 text-amalfi-navy">Hyundai / Kia</h4>
-                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em]">40–50 Pasajeros</span>
-                        <p class="text-sm text-slate-500 my-4 leading-relaxed italic">Categoría ejecutiva para trayectos largos con asientos ergonómicos y A/C potente.</p>
-                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20un%20autobús%20de%2050%20pasajeros" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em] block mb-4">40–50 Pasajeros</span>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">Categoría ejecutiva diseñada para trayectos largos. Asientos ergonómicos, excelente suspensión y aire full.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20una%20unidad%20de%2050%20pasajeros" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2 border-t pt-6">Consultar disponibilidad →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonios Section -->
+    <!-- Testimonios Section con Reseñas Reales -->
     <section id="testimonios" class="py-24 bg-amalfi-navy text-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Google Reviews</h2>
-                <h3 class="font-serif text-4xl">Confianza que se mueve con usted</h3>
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Reseñas de Google</h2>
+                <h3 class="font-serif text-4xl">La opinión de quienes viajan con nosotros</h3>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between h-full">
                     <div>
                         <div class="text-amalfi-gold text-lg mb-4">★★★★★</div>
-                        <p class="italic font-light leading-relaxed text-gray-200">"Muy puntuales y sin contratiempos. Choferes corteses y amables. Muy educados."</p>
+                        <p class="italic font-light leading-relaxed text-gray-200">"Muy puntuales y sin contratiempos en la trayectoria. Choferes corteses y amables. Muy educados."</p>
                     </div>
-                    <div class="mt-8 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">PG</div>
+                    <div class="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-xs">PG</div>
                         <div>
                             <div class="font-bold text-sm">Palsiri Guzman</div>
                             <div class="text-[10px] text-gray-400 uppercase tracking-widest">Reseña Verificada</div>
@@ -265,13 +268,13 @@
                     </div>
                 </div>
 
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between h-full">
                     <div>
                         <div class="text-amalfi-gold text-lg mb-4">★★★★★</div>
                         <p class="italic font-light leading-relaxed text-gray-200">"Esta empresa vale 100% cada centavo. Estan pendientes del mas minimo detalle. El chofer, una estrella de persona."</p>
                     </div>
-                    <div class="mt-8 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">MB</div>
+                    <div class="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-xs">MB</div>
                         <div>
                             <div class="font-bold text-sm">Marcel Batista</div>
                             <div class="text-[10px] text-gray-400 uppercase tracking-widest">Reseña Verificada</div>
@@ -279,13 +282,13 @@
                     </div>
                 </div>
 
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between h-full">
                     <div>
                         <div class="text-amalfi-gold text-lg mb-4">★★★★★</div>
                         <p class="italic font-light leading-relaxed text-gray-200">"Excelente servicio, chofer experimentado, y el autobus tenia internet y un excelente aire acondicionado."</p>
                     </div>
-                    <div class="mt-8 flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">ME</div>
+                    <div class="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-xs">ME</div>
                         <div>
                             <div class="font-bold text-sm">Mario Encarnacion</div>
                             <div class="text-[10px] text-gray-400 uppercase tracking-widest">Local Guide</div>
@@ -296,13 +299,13 @@
         </div>
     </section>
 
-    <!-- Ubicación Section Actualizada -->
+    <!-- Ubicación Section -->
     <section id="ubicacion" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Contacto</h2>
-                    <h3 class="font-serif text-4xl text-amalfi-navy mb-6">En el corazón de Santo Domingo</h3>
+                    <h3 class="font-serif text-4xl text-amalfi-navy mb-6">Oficinas Corporativas</h3>
                     <div class="space-y-6 text-slate-700">
                         <div class="flex items-center gap-4">
                             <span class="text-2xl">📍</span>
@@ -331,22 +334,24 @@
         </div>
     </section>
 
-    <!-- Footer Corregido con Logo Blanco -->
+    <!-- Footer Corregido -->
     <footer class="bg-amalfi-navy pt-20 pb-10 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-2">
                     <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
-                        <!-- Logo forzado a ser blanco con filtros CSS -->
-                        <img src="logo.png" alt="Amalfi Logo Footer" class="h-14 w-auto brightness-0 invert">
+                        <!-- El logo se carga directo sin filtros raros para que no se pierda -->
+                        <div class="bg-white p-2 rounded-xl">
+                            <img src="logo.png" alt="Logo Amalfi" class="h-10 w-auto">
+                        </div>
                         <span class="text-white font-bold text-2xl uppercase tracking-tighter">Amalfi</span>
                     </div>
                     <p class="text-gray-400 max-w-sm mx-auto md:mx-0 font-light mb-8 leading-relaxed italic">"Aliado estratégico en movilidad para el empresariado dominicano. Conectamos su empresa con la puntualidad."</p>
                     
-                    <div class="bg-white/5 p-5 rounded-2xl border border-white/10 inline-block">
+                    <div class="bg-white/5 p-5 rounded-3xl border border-white/10 inline-block">
                         <p class="text-white text-[10px] font-bold mb-3 uppercase tracking-[0.2em] opacity-60 text-center">SÍGUENOS EN INSTAGRAM</p>
-                        <a href="https://instagram.com/transporteamalfi?igshid=NDA1YzNhOGU=" target="_blank" class="flex items-center justify-center gap-3 text-amalfi-gold hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.607.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.365-.333 2.632-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.063-1.365.333-2.632 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        <a href="https://instagram.com/transporteamalfi?igshid=NDA1YzNhOGU=" target="_blank" class="flex items-center justify-center gap-3 text-amalfi-gold hover:text-white transition-colors group">
+                            <svg class="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.607.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.365-.333 2.632-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.063-1.365.333-2.632 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                             <span class="font-bold text-sm tracking-tight">@transporteamalfi</span>
                         </a>
                     </div>
@@ -356,20 +361,20 @@
                     <ul class="text-gray-400 space-y-4 text-sm font-light">
                         <li><a href="#servicios" class="hover:text-amalfi-gold transition-colors">Servicios</a></li>
                         <li><a href="#flota" class="hover:text-amalfi-gold transition-colors">Nuestra Flota</a></li>
-                        <li><a href="https://cotizacion.transporteamalfi.com/" class="hover:text-amalfi-gold transition-colors">Cotizar en Línea</a></li>
+                        <li><a href="https://cotizacion.transporteamalfi.com/" class="hover:text-amalfi-gold transition-colors" target="_blank">Cotizar en Línea</a></li>
                     </ul>
                 </div>
                 <div>
                     <h6 class="text-white font-bold mb-6 text-xs uppercase tracking-widest opacity-40">CONTACTO</h6>
                     <ul class="text-gray-400 space-y-4 text-sm font-light">
                         <li>📍 Santo Domingo, RD</li>
-                        <li>📞 <a href="tel:8095603012" class="hover:text-white transition-colors">(809) 560-3012</a></li>
+                        <li>📞 <a href="tel:8095603012" class="hover:text-white transition-colors font-bold">(809) 560-3012</a></li>
                         <li>✉️ info@transporteamalfi.com</li>
                     </ul>
                 </div>
             </div>
             <div class="pt-8 border-t border-white/5 text-center">
-                <p class="text-gray-600 text-[10px] tracking-widest uppercase">© 2025 Transporte Empresarial Amalfi SRL. Hecho en RD 🇩🇴</p>
+                <p class="text-gray-600 text-[10px] font-bold uppercase tracking-[0.2em]">© 2025 Transporte Empresarial Amalfi SRL. Hecho en RD 🇩🇴</p>
             </div>
         </div>
     </footer>
