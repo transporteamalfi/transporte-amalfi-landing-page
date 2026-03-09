@@ -6,6 +6,9 @@
     <title>Transporte Amalfi | Movilidad Corporativa y Turística en RD</title>
     <meta name="description" content="Líderes en transporte empresarial en Santo Domingo. Traslado de personal, ejecutivos y eventos con puntualidad garantizada.">
     
+    <!-- Favicon (Emoji de bus como respaldo rápido) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚌</text></svg>">
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fonts -->
@@ -38,6 +41,12 @@
         .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
         html { scroll-behavior: smooth; }
+        
+        /* Asegura que las imágenes de los buses se vean completas si es necesario */
+        .bus-img-container img {
+            object-fit: cover;
+            object-position: center;
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-amalfi-navy font-sans antialiased">
@@ -106,21 +115,21 @@
         </div>
     </section>
 
-    <!-- Trust Bar -->
+    <!-- Trust Bar Actualizado -->
     <div class="bg-white py-10 border-b">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">+1,000</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Clientes Corporativos</span></div>
+            <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">+1,000</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Clientes Felices</span></div>
             <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">4.8 ★</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Google Reviews</span></div>
             <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">100%</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Puntualidad</span></div>
             <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">24/7</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Asistencia</span></div>
         </div>
     </div>
 
-    <!-- Sectores Section -->
+    <!-- Sectores Section Actualizada -->
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Sectores Clave</h2>
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Sectores que confían en nosotros</h2>
                 <h3 class="font-serif text-4xl text-amalfi-navy">Experiencia en diversas industrias</h3>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
@@ -152,7 +161,7 @@
         </div>
     </section>
 
-    <!-- Services Grid -->
+    <!-- Services Grid con Emoji de Bus -->
     <section id="servicios" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -165,69 +174,69 @@
                         <span class="text-4xl">🚌</span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Traslado de Personal</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Rutas programadas con monitoreo en tiempo real. Máxima puntualidad para turnos rotativos y zonas industriales.</p>
+                    <p class="text-slate-500 font-light leading-relaxed">Rutas programadas para zonas industriales y comerciales. Garantizamos que su equipo llegue a tiempo.</p>
                 </div>
                 <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
                     <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center mb-6">
                         <span class="text-4xl">🚌</span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Transporte Ejecutivo</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Servicio VIP para directivos y socios. Vehículos impecables y choferes discretos altamente capacitados.</p>
+                    <p class="text-slate-500 font-light leading-relaxed">Servicio VIP para directivos. Vehículos modernos y conductores profesionales para una movilidad impecable.</p>
                 </div>
                 <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
                     <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center mb-6">
                         <span class="text-4xl">🚌</span>
                     </div>
                     <h4 class="text-xl font-bold mb-3">Eventos & Convenciones</h4>
-                    <p class="text-slate-500 font-light leading-relaxed">Coordinación logística para grupos grandes. Nos encargamos de que todo el personal llegue a su destino unido.</p>
+                    <p class="text-slate-500 font-light leading-relaxed">Logística de transporte para grupos masivos. Coordinamos cada detalle para que su evento sea un éxito.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Flota Section Ajustada -->
+    <!-- Flota Section (Fotos más grandes y completas) -->
     <section id="flota" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Nuestra Flota</h2>
                 <h3 class="font-serif text-4xl text-amalfi-navy mb-4">Unidades seguras para cada necesidad</h3>
-                <p class="text-slate-500 max-w-3xl mx-auto">En Transporte Amalfi contamos con una flota moderna diseñada para adaptarse a usted, desde traslados ejecutivos hasta transporte masivo.</p>
+                <p class="text-slate-500 max-w-3xl mx-auto">Contamos con una flota moderna y segura diseñada para adaptarse a sus necesidades, desde traslados ejecutivos hasta transporte masivo.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-10">
                 <!-- Toyota Hiace -->
-                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
-                    <div class="h-72 bg-amalfi-navy relative overflow-hidden">
-                        <img src="bus-15.jpg" class="w-full h-full object-cover" alt="Toyota Hiace Amalfi">
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+                    <div class="h-80 bg-slate-100 bus-img-container overflow-hidden">
+                        <img src="bus-15.jpg" class="w-full h-full object-cover" alt="Toyota Hiace Amalfi 15 Pax">
                     </div>
-                    <div class="p-8">
-                        <h4 class="font-bold text-xl mb-1">Toyota Hiace</h4>
-                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-widest">12–15 Pasajeros</span>
-                        <p class="text-sm text-slate-500 my-4 leading-relaxed">Líder en fiabilidad y confort. Ideal para traslados ejecutivos y movilidad ágil en zonas urbanas.</p>
-                        <a href="https://wa.me/18099885237?text=Hola,%20me%20gustaría%20cotizar%20la%20Toyota%20Hiace%20(15%20pax)" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
+                    <div class="p-8 flex-grow">
+                        <h4 class="font-bold text-2xl mb-1 text-amalfi-navy">Toyota Hiace</h4>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em]">12–15 Pasajeros</span>
+                        <p class="text-sm text-slate-500 my-4 leading-relaxed italic">Fiabilidad y confort excepcional. Ideal para traslados ejecutivos y aeropuertos.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Toyota%20Hiace" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
                     </div>
                 </div>
                 <!-- Toyota Coaster -->
-                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
-                    <div class="h-72 bg-amalfi-navy relative overflow-hidden">
-                        <img src="bus-30.jpg" class="w-full h-full object-cover" alt="Toyota Coaster Amalfi">
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+                    <div class="h-80 bg-slate-100 bus-img-container overflow-hidden">
+                        <img src="bus-30.jpg" class="w-full h-full object-cover" alt="Toyota Coaster Amalfi 30 Pax">
                     </div>
-                    <div class="p-8">
-                        <h4 class="font-bold text-xl mb-1">Toyota Coaster</h4>
-                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-widest">25–30 Pasajeros</span>
-                        <p class="text-sm text-slate-500 my-4 leading-relaxed">Perfecto para transporte empresarial y eventos grupales. Destaca por su durabilidad y seguridad.</p>
-                        <a href="https://wa.me/18099885237?text=Hola,%20me%20gustaría%20cotizar%20la%20Toyota%20Coaster%20(30%20pax)" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
+                    <div class="p-8 flex-grow">
+                        <h4 class="font-bold text-2xl mb-1 text-amalfi-navy">Toyota Coaster</h4>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em]">25–30 Pasajeros</span>
+                        <p class="text-sm text-slate-500 my-4 leading-relaxed italic">Perfecto para transporte empresarial y excursiones grupales con gran durabilidad.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20la%20Toyota%20Coaster" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
                     </div>
                 </div>
                 <!-- Grandes Grupos -->
-                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
-                    <div class="h-72 bg-amalfi-navy relative overflow-hidden">
-                        <img src="bus-50.jpg" class="w-full h-full object-cover" alt="Bus 50 pasajeros Amalfi">
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 flex flex-col">
+                    <div class="h-80 bg-slate-100 bus-img-container overflow-hidden">
+                        <img src="bus-50.jpg" class="w-full h-full object-cover" alt="Hyundai Kia Amalfi 50 Pax">
                     </div>
-                    <div class="p-8">
-                        <h4 class="font-bold text-xl mb-1">Hyundai / Kia</h4>
-                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-widest">40–50 Pasajeros</span>
-                        <p class="text-sm text-slate-500 my-4 leading-relaxed">Categoría ejecutiva para trayectos largos. Asientos ergonómicos, A/C y máxima estabilidad en carretera.</p>
-                        <a href="https://wa.me/18099885237?text=Hola,%20me%20gustaría%20cotizar%20una%20unidad%20de%2050%20pasajeros" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
+                    <div class="p-8 flex-grow">
+                        <h4 class="font-bold text-2xl mb-1 text-amalfi-navy">Hyundai / Kia</h4>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-[0.2em]">40–50 Pasajeros</span>
+                        <p class="text-sm text-slate-500 my-4 leading-relaxed italic">Categoría ejecutiva para trayectos largos con asientos ergonómicos y A/C potente.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20quisiera%20consultar%20disponibilidad%20de%20un%20autobús%20de%2050%20pasajeros" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors flex items-center gap-2">Consultar disponibilidad →</a>
                     </div>
                 </div>
             </div>
@@ -287,18 +296,29 @@
         </div>
     </section>
 
-    <!-- Ubicación Section -->
+    <!-- Ubicación Section Actualizada -->
     <section id="ubicacion" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Ubicación</h2>
+                    <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Contacto</h2>
                     <h3 class="font-serif text-4xl text-amalfi-navy mb-6">En el corazón de Santo Domingo</h3>
-                    <p class="text-slate-600 mb-8 leading-relaxed">Visítenos en nuestras oficinas corporativas o coordine una reunión para diseñar su plan de logística personalizada.</p>
-                    <div class="space-y-4 text-slate-700">
-                        <p class="flex items-center gap-3">📍 Santo Domingo, República Dominicana</p>
-                        <p class="flex items-center gap-3">📞 +1 (809) 988-5237</p>
-                        <p class="flex items-center gap-3">✉️ info@transporteamalfi.com</p>
+                    <div class="space-y-6 text-slate-700">
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl">📍</span>
+                            <p>Santo Domingo, República Dominicana</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl">📞</span>
+                            <p><a href="tel:8095603012" class="hover:text-amalfi-gold transition-colors font-bold">(809) 560-3012</a> (Oficina)</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl">✉️</span>
+                            <p>info@transporteamalfi.com</p>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <a href="https://maps.google.com/maps?q=Transporte+Empresarial+Amalfi+Santo+Domingo" target="_blank" class="inline-block px-8 py-4 bg-amalfi-navy text-white rounded-xl font-bold hover:bg-slate-800 transition-all shadow-lg">Ver en Google Maps</a>
                     </div>
                 </div>
                 <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 h-[450px]">
@@ -311,28 +331,28 @@
         </div>
     </section>
 
-    <!-- Footer Corregido con Logo Visible -->
+    <!-- Footer Corregido con Logo Blanco -->
     <footer class="bg-amalfi-navy pt-20 pb-10 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
             <div class="grid md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-2">
                     <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
-                        <!-- Logo forzado a ser blanco -->
+                        <!-- Logo forzado a ser blanco con filtros CSS -->
                         <img src="logo.png" alt="Amalfi Logo Footer" class="h-14 w-auto brightness-0 invert">
                         <span class="text-white font-bold text-2xl uppercase tracking-tighter">Amalfi</span>
                     </div>
-                    <p class="text-gray-400 max-w-sm mx-auto md:mx-0 font-light mb-8 leading-relaxed">Aliado estratégico en movilidad para el empresariado dominicano. Conectamos su empresa con la puntualidad.</p>
+                    <p class="text-gray-400 max-w-sm mx-auto md:mx-0 font-light mb-8 leading-relaxed italic">"Aliado estratégico en movilidad para el empresariado dominicano. Conectamos su empresa con la puntualidad."</p>
                     
-                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10 inline-block">
-                        <p class="text-white text-[10px] font-bold mb-2 uppercase tracking-[0.2em]">Síguenos en Instagram</p>
-                        <a href="https://instagram.com/transporteamalfi?igshid=NDA1YzNhOGU=" target="_blank" class="flex items-center gap-3 text-amalfi-gold hover:text-white transition-colors">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.607.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.365-.333 2.632-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.063-1.365.333-2.632 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                            <span class="font-bold text-xs">@transporteamalfi</span>
+                    <div class="bg-white/5 p-5 rounded-2xl border border-white/10 inline-block">
+                        <p class="text-white text-[10px] font-bold mb-3 uppercase tracking-[0.2em] opacity-60 text-center">SÍGUENOS EN INSTAGRAM</p>
+                        <a href="https://instagram.com/transporteamalfi?igshid=NDA1YzNhOGU=" target="_blank" class="flex items-center justify-center gap-3 text-amalfi-gold hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.607.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.365-.333 2.632-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.063-1.365.333-2.632 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            <span class="font-bold text-sm tracking-tight">@transporteamalfi</span>
                         </a>
                     </div>
                 </div>
                 <div>
-                    <h6 class="text-white font-bold mb-6 text-xs uppercase tracking-widest">Empresa</h6>
+                    <h6 class="text-white font-bold mb-6 text-xs uppercase tracking-widest opacity-40">MENÚ</h6>
                     <ul class="text-gray-400 space-y-4 text-sm font-light">
                         <li><a href="#servicios" class="hover:text-amalfi-gold transition-colors">Servicios</a></li>
                         <li><a href="#flota" class="hover:text-amalfi-gold transition-colors">Nuestra Flota</a></li>
@@ -340,10 +360,10 @@
                     </ul>
                 </div>
                 <div>
-                    <h6 class="text-white font-bold mb-6 text-xs uppercase tracking-widest">Soporte</h6>
+                    <h6 class="text-white font-bold mb-6 text-xs uppercase tracking-widest opacity-40">CONTACTO</h6>
                     <ul class="text-gray-400 space-y-4 text-sm font-light">
                         <li>📍 Santo Domingo, RD</li>
-                        <li>📞 +1 (809) 988-5237</li>
+                        <li>📞 <a href="tel:8095603012" class="hover:text-white transition-colors">(809) 560-3012</a></li>
                         <li>✉️ info@transporteamalfi.com</li>
                     </ul>
                 </div>
