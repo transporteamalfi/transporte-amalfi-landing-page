@@ -1,758 +1,368 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<link rel="canonical" href="https://transporteamalfi.github.io/transporte-amalfi-landing-page/"/>
-<title>Transporte Empresarial Amalfi – Transporte Corporativo en Santo Domingo</title>
-<meta name="description" content="Especialistas en transporte corporativo, traslado de personal y logistica de grupos empresariales en Santo Domingo y toda la Republica Dominicana. Cotiza ahora."/>
-<meta name="keywords" content="transporte corporativo Santo Domingo, traslado de personal Republica Dominicana, buses ejecutivos RD, transporte empresarial Santo Domingo, alquiler de autobuses para empresas, logistica de personal Santo Domingo"/>
-<meta property="og:title" content="Transporte Empresarial Amalfi – Transporte Corporativo en Santo Domingo"/>
-<meta property="og:description" content="Especialistas en transporte corporativo y traslado de personal en Santo Domingo. Flota moderna, conductores capacitados y atencion personalizada."/>
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://transporteamalfi.github.io/transporte-amalfi-landing-page/"/>
-<meta property="og:image" content="bus-principal.jpg"/>
-<link rel="icon" type="image/png" href="logo.png"/>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TransportationService","name":"Transporte Empresarial Amalfi SRL","description":"Especialistas en transporte corporativo, traslado de personal y logistica de grupos empresariales en Santo Domingo","url":"https://www.transporteamalfi.com","areaServed":"Republica Dominicana","address":{"@type":"PostalAddress","streetAddress":"Av. Monumental #6","addressLocality":"Santo Domingo","addressCountry":"DO"},"telephone":"+1-809-000-0000","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"51"}}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--navy:#0B1F3A;--navy-light:#12294D;--gold:#C9A84C;--gold-light:#E2C46E;--white:#FFFFFF;--off-white:#F8F6F1;--gray:#6B7280;--light:#EEF0F4}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:var(--navy);background:var(--white);overflow-x:hidden}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte Amalfi | Movilidad Corporativa y Turística en RD</title>
+    <meta name="description" content="Líderes en transporte empresarial en Santo Domingo. Traslado de personal, ejecutivos y eventos con puntualidad garantizada.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        amalfi: {
+                            navy: '#0B1F3A',
+                            gold: '#C9A84C',
+                            goldLight: '#E2C46E',
+                            slate: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(11,31,58,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2)}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:12px}
-.logo-img{width:42px;height:42px;object-fit:contain;border-radius:4px}
-.logo-text{color:var(--white);font-size:14px;font-weight:500;line-height:1.3}
-.logo-text span{color:var(--gold);display:block;font-size:10px;font-weight:300;letter-spacing:2px;text-transform:uppercase}
-.nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13px;transition:.2s}
-.nav-links a:hover{color:var(--gold)}
-.btn-nav{background:var(--gold)!important;color:var(--navy)!important;padding:10px 24px;border-radius:2px;font-weight:700!important;font-size:13px!important}
-.btn-nav:hover{background:var(--gold-light)!important}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.hamburger span{width:22px;height:2px;background:var(--white);border-radius:2px;display:block;transition:.3s}
-.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:var(--navy);padding:1.5rem 2rem;border-top:1px solid rgba(201,168,76,.2);z-index:998}
-.mobile-menu a{display:block;color:rgba(255,255,255,.8);text-decoration:none;padding:12px 0;font-size:15px;border-bottom:1px solid rgba(255,255,255,.07)}
-.mobile-menu .btn-mobile{display:block;margin-top:1rem;background:var(--gold);color:var(--navy);text-align:center;padding:14px;font-weight:700;border-radius:2px}
-.mobile-menu.open{display:block}
-.overlay{display:none;position:fixed;inset:0;z-index:997;background:rgba(0,0,0,.4)}
-.overlay.open{display:block}
-
-.hero{min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 55%,#1a3a6b 100%);display:flex;align-items:center;padding-top:70px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background-image:url('bus-principal.jpg');background-size:cover;background-position:center;opacity:.22;clip-path:polygon(15% 0,100% 0,100% 100%,0% 100%)}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.hero-content{max-width:1200px;margin:0 auto;padding:4rem 2rem;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);color:var(--gold);padding:6px 18px;border-radius:2px;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:2rem}
-.hero-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5.5vw,4.8rem);font-weight:400;color:var(--white);line-height:1.1;margin-bottom:1.5rem;max-width:700px}
-.hero h1 em{font-style:italic;color:var(--gold)}
-.hero-sub{color:rgba(255,255,255,.72);font-size:1.05rem;line-height:1.85;max-width:530px;margin-bottom:2.5rem;font-weight:300}
-.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:var(--gold);color:var(--navy);padding:16px 36px;font-size:14px;font-weight:700;text-decoration:none;border-radius:2px;transition:all .25s;display:inline-block;cursor:pointer;border:none;font-family:'Inter',sans-serif}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.3)}
-.btn-outline{border:1px solid rgba(255,255,255,.4);color:var(--white);padding:16px 36px;font-size:14px;text-decoration:none;border-radius:2px;transition:all .25s;display:inline-block}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-stats{margin-top:4rem;display:flex;gap:3rem;flex-wrap:wrap}
-.stat{border-left:2px solid var(--gold);padding-left:1.25rem}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--white);line-height:1}
-.stat-label{color:rgba(255,255,255,.5);font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
-
-.strip{background:var(--gold);padding:.9rem 2rem;text-align:center}
-.strip p{color:var(--navy);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
-
-section{padding:6rem 2rem}
-.container{max-width:1200px;margin:0 auto}
-.section-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem;font-weight:500}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--navy);line-height:1.2;margin-bottom:1.25rem}
-.section-title em{font-style:italic}
-.section-sub{color:var(--gray);line-height:1.8;font-size:1rem;max-width:540px;font-weight:300}
-.divider{width:60px;height:2px;background:var(--gold);margin:1.5rem 0}
-.bg-off{background:var(--off-white)}
-.bg-navy{background:var(--navy)}
-
-/* FADE IN */
-.fade-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-
-/* SERVICIOS */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:3.5rem}
-.service-card{background:var(--white);border-radius:4px;padding:2.5rem;border:1px solid #E5E7EB;transition:all .3s;position:relative;overflow:hidden}
-.service-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--gold);transform:scaleX(0);transition:.3s}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(11,31,58,.1)}
-.service-card:hover::after{transform:scaleX(1)}
-.service-primary{background:rgba(11,31,58,.02);border-color:rgba(201,168,76,.2)}
-.s-icon{width:48px;height:48px;background:rgba(201,168,76,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
-.s-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--navy);margin-bottom:.75rem}
-.service-card p{color:var(--gray);font-size:.92rem;line-height:1.7;font-weight:300}
-.service-tag{display:inline-block;margin-top:1.25rem;font-size:11px;font-weight:600;color:var(--gold);letter-spacing:1px;text-transform:uppercase;border:1px solid rgba(201,168,76,.3);padding:4px 12px;border-radius:2px}
-
-/* CONFIANZA */
-.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.5rem;margin-top:3.5rem}
-.trust-card{text-align:center;padding:2rem 1.25rem;border:1px solid #E5E7EB;border-radius:4px;background:var(--white);transition:.2s}
-.trust-card:hover{box-shadow:0 10px 30px rgba(11,31,58,.08);transform:translateY(-2px)}
-.trust-icon{width:52px;height:52px;background:rgba(201,168,76,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
-.trust-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.trust-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--navy);line-height:1}
-.trust-label{font-size:.8rem;color:var(--gray);margin-top:.4rem;font-weight:300;line-height:1.5}
-
-/* FLOTA */
-.flota-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
-.flota-card{background:var(--navy);border-radius:4px;overflow:hidden;transition:.2s}
-.flota-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(11,31,58,.3)}
-.flota-img{height:220px;background-color:#1a2f50;background-size:cover;background-position:center center;position:relative;overflow:hidden}
-.flota-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:50px;background:linear-gradient(transparent,rgba(11,31,58,.7))}
-.flota-info{padding:1.5rem}
-.flota-cap{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--gold);line-height:1}
-.flota-cap span{font-size:.9rem;font-family:'Inter',sans-serif;color:rgba(255,255,255,.4);font-weight:300}
-.flota-name{color:var(--white);font-weight:600;margin:.5rem 0 .25rem;font-size:.93rem}
-.flota-desc{color:rgba(255,255,255,.5);font-size:.8rem;line-height:1.6;font-weight:300;margin-bottom:1rem}
-.flota-features{display:flex;flex-wrap:wrap;gap:.4rem}
-.ff{font-size:.72rem;background:rgba(255,255,255,.07);color:rgba(255,255,255,.7);padding:4px 9px;border-radius:2px;display:flex;align-items:center;gap:4px}
-.ff svg{width:11px;height:11px;stroke:var(--gold);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-
-/* VENTAJAS */
-.ventajas-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--light);border-radius:4px;overflow:hidden;margin-top:3.5rem}
-.ventaja{background:var(--white);padding:2.5rem;display:flex;gap:1.5rem;transition:.2s}
-.ventaja:hover{background:rgba(248,246,241,.8)}
-.v-icon{width:44px;height:44px;background:rgba(201,168,76,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.v-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.ventaja h4{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:.4rem}
-.ventaja p{color:var(--gray);font-size:.88rem;line-height:1.7;font-weight:300}
-
-/* GERENTE */
-.gerente-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.gerente-text .section-title{color:var(--white)}
-.gerente-text .section-sub{color:rgba(255,255,255,.6)}
-.gerente-text .section-label{color:var(--gold)}
-.gerente-card{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.2);border-radius:4px;padding:2.5rem;position:relative}
-.gerente-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:8rem;color:var(--gold);opacity:.12;position:absolute;top:-1rem;left:1.5rem;line-height:1;pointer-events:none}
-.gerente-quote{color:rgba(255,255,255,.8);font-size:1.05rem;line-height:1.8;font-weight:300;font-style:italic;margin-bottom:1.5rem;position:relative;z-index:1}
-.gerente-ventajas{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.75rem}
-.gv{font-size:.85rem;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:.6rem}
-.gv::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0}
-.gerente-info{display:flex;align-items:center;gap:1rem;border-top:1px solid rgba(201,168,76,.15);padding-top:1.25rem}
-.gerente-avatar{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);flex-shrink:0}
-.gerente-name{color:var(--white);font-size:.93rem;font-weight:500}
-.gerente-role{color:var(--gold);font-size:.78rem;letter-spacing:1px;text-transform:uppercase;margin-top:2px}
-
-/* GALERIA */
-.galeria-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3.5rem}
-.galeria-item{border-radius:4px;overflow:hidden;aspect-ratio:4/3;position:relative;background:var(--light)}
-.galeria-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
-.galeria-item:hover img{transform:scale(1.05)}
-
-/* RESEÑAS */
-.reviews-header{display:flex;align-items:center;gap:1.5rem;margin-bottom:3rem;flex-wrap:wrap}
-.google-badge{display:flex;align-items:center;gap:.75rem;background:var(--white);border:1px solid #E5E7EB;border-radius:4px;padding:.75rem 1.25rem;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.badge-score{font-size:1.5rem;font-weight:700;color:var(--navy);font-family:'Cormorant Garamond',serif}
-.badge-stars{color:var(--gold);font-size:.9rem;letter-spacing:2px}
-.badge-count{font-size:.78rem;color:var(--gray)}
-.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.review-card{background:var(--white);border:1px solid #E5E7EB;border-radius:4px;padding:2rem;transition:.2s}
-.review-card:hover{box-shadow:0 10px 30px rgba(11,31,58,.08);transform:translateY(-2px)}
-.stars{color:var(--gold);font-size:.95rem;letter-spacing:2px;margin-bottom:.75rem}
-.review-meta{font-size:.75rem;color:var(--gray);margin-bottom:.75rem}
-.review-text{color:#374151;font-size:.92rem;line-height:1.75;font-weight:300;font-style:italic;margin-bottom:1.25rem}
-.reviewer{display:flex;align-items:center;gap:.75rem;border-top:1px solid #F3F4F6;padding-top:1rem}
-.r-avatar{width:34px;height:34px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:.78rem;font-weight:700;flex-shrink:0}
-.r-name{font-size:.88rem;font-weight:600;color:var(--navy)}
-.r-source{font-size:.75rem;color:var(--gray);display:flex;align-items:center;gap:4px;margin-top:2px}
-.gdot{width:7px;height:7px;background:#4285F4;border-radius:50%;display:inline-block}
-
-/* FAQ */
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:3.5rem}
-.faq-item{background:var(--white);border:1px solid #E5E7EB;border-radius:4px;overflow:hidden}
-.faq-q{width:100%;background:none;border:none;padding:1.4rem 1.5rem;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--navy);transition:.2s}
-.faq-q:hover{color:var(--gold)}
-.faq-arrow{font-size:.8rem;color:var(--gold);transition:.3s;flex-shrink:0}
-.faq-q.open .faq-arrow{transform:rotate(180deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.faq-a.open{max-height:200px}
-.faq-a p{padding:0 1.5rem 1.5rem;color:var(--gray);font-size:.9rem;line-height:1.75;font-weight:300}
-
-/* FORMULARIO */
-.form-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.form-text .section-title{color:var(--white)}
-.form-text .section-sub{color:rgba(255,255,255,.6)}
-.form-text .section-label{color:var(--gold)}
-.form-hi-list{margin-top:2rem;display:flex;flex-direction:column;gap:.9rem}
-.form-hi{display:flex;align-items:center;gap:.75rem;color:rgba(255,255,255,.7);font-size:.88rem}
-.form-hi-check{width:20px;height:20px;background:rgba(201,168,76,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.form-hi-check svg{width:10px;height:10px;stroke:var(--gold);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.contact-form{background:var(--white);border-radius:4px;padding:2.5rem}
-.contact-form h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--navy);margin-bottom:.4rem}
-.contact-form p{color:var(--gray);font-size:.85rem;margin-bottom:1.5rem}
-.form-group{margin-bottom:1rem}
-.form-group label{display:block;font-size:.75rem;font-weight:600;color:var(--navy);letter-spacing:.5px;text-transform:uppercase;margin-bottom:.4rem}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:11px 14px;border:1px solid #E5E7EB;border-radius:2px;font-size:.9rem;color:var(--navy);font-family:'Inter',sans-serif;transition:.2s;background:var(--white)}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.1)}
-.form-group input:required:invalid:not(:placeholder-shown){border-color:#EF4444}
-.form-group textarea{resize:vertical;min-height:75px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.btn-form{width:100%;background:var(--gold);color:var(--navy);padding:15px;font-size:14px;font-weight:700;border:none;border-radius:2px;cursor:pointer;transition:all .25s;margin-top:.5rem;font-family:'Inter',sans-serif;letter-spacing:.3px}
-.btn-form:hover{background:var(--gold-light);transform:translateY(-1px)}
-.btn-loading{width:100%;background:var(--navy);color:rgba(255,255,255,.7);padding:15px;font-size:14px;font-weight:600;border:none;border-radius:2px;cursor:not-allowed;margin-top:.5rem;display:none;font-family:'Inter',sans-serif;text-align:center}
-.form-note{text-align:center;font-size:.75rem;color:var(--gray);margin-top:.75rem}
-
-/* MAPA */
-.mapa-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.map-frame{border-radius:4px;overflow:hidden;border:1px solid #E5E7EB;box-shadow:0 20px 40px rgba(11,31,58,.1)}
-.map-frame iframe{width:100%;height:380px;display:block;border:0}
-.contact-items{margin-top:2rem;display:flex;flex-direction:column;gap:1.1rem}
-.contact-item{display:flex;align-items:flex-start;gap:1rem}
-.c-icon{width:40px;height:40px;background:rgba(201,168,76,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.c-icon svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.c-label{font-size:.75rem;color:var(--gray);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
-.c-value{font-size:.93rem;color:var(--navy);font-weight:500}
-.c-value a{color:var(--navy);text-decoration:none}
-.c-value a:hover{color:var(--gold)}
-.c-note{font-size:.78rem;color:var(--gray);font-weight:300}
-
-.cta-final{background:linear-gradient(135deg,var(--navy),var(--navy-light));text-align:center;padding:7rem 2rem}
-.cta-final .section-title{color:var(--white)}
-.cta-final .section-label{display:block}
-.cta-final p{color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 2.5rem;line-height:1.8;font-weight:300}
-.cta-final .divider{margin:1.5rem auto}
-
-footer{background:#07141F;padding:3rem 2rem;text-align:center;border-top:1px solid rgba(201,168,76,.15)}
-footer p{color:rgba(255,255,255,.35);font-size:.82rem;line-height:1.8}
-footer a{color:var(--gold);text-decoration:none}
-
-.wa-btn{position:fixed;bottom:2rem;right:2rem;z-index:998;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:all .25s;text-decoration:none}
-.wa-btn:hover{transform:scale(1.1)}
-.wa-btn svg{width:28px;height:28px;fill:white}
-.wa-pulse{position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#25D366;border-radius:50%;border:2px solid white;animation:wapulse 2.5s infinite}
-@keyframes wapulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
-
-@media(max-width:900px){
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .gerente-inner,.form-inner,.mapa-inner{grid-template-columns:1fr}
-  .flota-grid,.faq-grid,.ventajas-grid,.galeria-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  .hero-stats{gap:1.5rem}
-  .flota-grid,.faq-grid,.form-row,.ventajas-grid,.galeria-grid{grid-template-columns:1fr}
-  .trust-grid{grid-template-columns:1fr 1fr}
-  section{padding:4rem 1.25rem}
-}
-</style>
+    <style>
+        .glass { background: rgba(11, 31, 58, 0.95); backdrop-filter: blur(12px); }
+        .hero-gradient { background: linear-gradient(135deg, #0B1F3A 0%, #1E293B 100%); }
+        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-amalfi-navy font-sans antialiased">
 
-<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 glass border-b border-amalfi-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <img src="logo.png" alt="Logo Transporte Amalfi" class="h-12 w-auto object-contain">
+                    <div class="hidden sm:block">
+                        <span class="block text-white font-bold text-lg leading-tight uppercase tracking-tight">Amalfi</span>
+                        <span class="block text-amalfi-gold text-[9px] tracking-widest uppercase font-semibold">Transporte Empresarial</span>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#servicios" class="text-gray-300 hover:text-amalfi-gold transition-colors text-sm font-medium">Servicios</a>
+                    <a href="#flota" class="text-gray-300 hover:text-amalfi-gold transition-colors text-sm font-medium">Flota</a>
+                    <a href="#testimonios" class="text-gray-300 hover:text-amalfi-gold transition-colors text-sm font-medium">Testimonios</a>
+                    <a href="https://cotizacion.transporteamalfi.com/" target="_blank" class="bg-amalfi-gold hover:bg-amalfi-goldLight text-amalfi-navy px-6 py-2.5 rounded-full font-bold text-sm transition-all shadow-md">Cotizar Ahora</a>
+                </div>
 
-<nav>
-  <div class="nav-inner">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Transporte Empresarial Amalfi" class="logo-img"/>
-      <div class="logo-text">Transporte Amalfi<span>Transporte Empresarial</span></div>
-    </div>
-    <div class="nav-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#flota">Flota</a>
-      <a href="#reseñas">Reseñas</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#cotizar" class="btn-nav">Cotizar ahora</a>
-    </div>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="mobile-menu" id="mobileMenu" role="navigation">
-  <a href="#servicios" onclick="closeMenu()">Servicios</a>
-  <a href="#flota" onclick="closeMenu()">Flota</a>
-  <a href="#reseñas" onclick="closeMenu()">Resenas</a>
-  <a href="#faq" onclick="closeMenu()">FAQ</a>
-  <a href="#contacto" onclick="closeMenu()">Contacto</a>
-  <a href="#cotizar" class="btn-mobile" onclick="closeMenu()">Cotizar ahora &rarr;</a>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-badge"><div class="hero-dot"></div>Santo Domingo, Republica Dominicana</div>
-    <h1>Transporte corporativo<br><em>puntual, seguro y confiable</em><br>para empresas que no paran</h1>
-    <p class="hero-sub">Especialistas en transporte corporativo, traslado de personal y logistica de grupos empresariales en Santo Domingo y toda la Republica Dominicana. Conductores capacitados, flota moderna con WiFi y A/C, y atencion personalizada.</p>
-    <div class="hero-ctas">
-      <a href="#cotizar" class="btn-primary">Obtener cotizacion gratis &rarr;</a>
-      <a href="#servicios" class="btn-outline">Ver servicios</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num">+1,000</div><div class="stat-label">Clientes atendidos</div></div>
-      <div class="stat"><div class="stat-num">4.7&#9733;</div><div class="stat-label">Google Reviews</div></div>
-      <div class="stat"><div class="stat-num">7/7</div><div class="stat-label">Dias disponibles</div></div>
-      <div class="stat"><div class="stat-num">&lt;24h</div><div class="stat-label">Respuesta tipica</div></div>
-    </div>
-  </div>
-</section>
-
-<div class="strip"><p>Transporte Corporativo &nbsp;&middot;&nbsp; Traslado de Personal &nbsp;&middot;&nbsp; Eventos Empresariales &nbsp;&middot;&nbsp; Logistica de Grupos &nbsp;&middot;&nbsp; Cobertura Nacional en RD</p></div>
-
-<!-- SERVICIOS -->
-<section class="bg-off" id="servicios">
-  <div class="container fade-in">
-    <div class="section-label">Lo que hacemos</div>
-    <h2 class="section-title">Transporte disenado<br><em>para empresas que exigen</em></h2>
-    <div class="divider"></div>
-    <p class="section-sub">Nuestro enfoque principal es el cliente corporativo: empresas, instituciones y organizaciones que necesitan puntualidad, discrecion y confort en cada servicio de transporte en Santo Domingo.</p>
-    <div class="services-grid">
-      <div class="service-card service-primary fade-in">
-        <div class="s-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
-        <h3>Transporte Corporativo</h3>
-        <p>Traslado de ejecutivos y equipos con rutas fijas, horarios acordados y seguimiento puntual. La solucion de movilidad que tu empresa necesita en Santo Domingo y toda la RD.</p>
-        <span class="service-tag">Servicio principal</span>
-      </div>
-      <div class="service-card service-primary fade-in">
-        <div class="s-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Traslado de Personal</h3>
-        <p>Llevamos y traemos colaboradores desde distintos puntos de la ciudad. Reducimos costos operativos y mejoramos la puntualidad de tu equipo de trabajo.</p>
-        <span class="service-tag">Alta demanda</span>
-      </div>
-      <div class="service-card fade-in">
-        <div class="s-icon"><svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
-        <h3>Eventos y Convenciones</h3>
-        <p>Coordinamos el transporte de asistentes a conferencias, team buildings y lanzamientos con seguimiento en tiempo real y comunicacion directa con tu equipo.</p>
-        <span class="service-tag">Flota completa</span>
-      </div>
-      <div class="service-card fade-in">
-        <div class="s-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-        <h3>Excursiones y Giras</h3>
-        <p>Organizamos paseos grupales y giras en todo el pais. Tu grupo viaja comodo y seguro mientras nosotros nos encargamos de la ruta y la logistica.</p>
-        <span class="service-tag">Destinos en toda RD</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONFIANZA -->
-<section>
-  <div class="container fade-in">
-    <div class="section-label">Empresa establecida</div>
-    <h2 class="section-title">Por que nos eligen<br><em>las empresas en RD</em></h2>
-    <div class="divider"></div>
-    <p class="section-sub">Cuando una empresa contrata transporte, compra confianza, responsabilidad y cumplimiento. Aqui estan nuestras credenciales para que decidas con seguridad.</p>
-    <div class="trust-grid">
-      <div class="trust-card fade-in">
-        <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <div class="trust-num">Seguro</div>
-        <div class="trust-label">Pasajeros y responsabilidad civil vigente en toda la flota</div>
-      </div>
-      <div class="trust-card fade-in">
-        <div class="trust-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-        <div class="trust-num">INTRANT</div>
-        <div class="trust-label">Conductores capacitados con licencia y manejo defensivo</div>
-      </div>
-      <div class="trust-card fade-in">
-        <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-        <div class="trust-num">NCF</div>
-        <div class="trust-label">Facturacion empresarial con comprobante fiscal para la DGII</div>
-      </div>
-      <div class="trust-card fade-in">
-        <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <div class="trust-num">7/7</div>
-        <div class="trust-label">Operacion todos los dias incluyendo feriados y fines de semana</div>
-      </div>
-      <div class="trust-card fade-in">
-        <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div class="trust-num">RD</div>
-        <div class="trust-label">Cobertura nacional desde Santo Domingo hasta todo el pais</div>
-      </div>
-      <div class="trust-card fade-in">
-        <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-        <div class="trust-num">+51</div>
-        <div class="trust-label">Resenas verificadas en Google con calificacion de 4.7 estrellas</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FLOTA -->
-<section class="bg-off" id="flota">
-  <div class="container fade-in">
-    <div class="section-label">Nuestra flota</div>
-    <h2 class="section-title">Vehiculos modernos<br><em>con todo lo que necesitas</em></h2>
-    <div class="divider"></div>
-    <p class="section-sub">Toda la flota pasa por mantenimiento preventivo periodico y cumple con las normativas del INTRANT. Equipados con WiFi, A/C y cinturones en cada asiento.</p>
-    <div class="flota-grid">
-      <div class="flota-card fade-in">
-        <div class="flota-img" style="background-image:url('bus-15.jpg')" role="img" aria-label="Minibus ejecutivo 15 pasajeros Transporte Amalfi Santo Domingo"></div>
-        <div class="flota-info">
-          <div class="flota-cap">15 <span>pasajeros</span></div>
-          <div class="flota-name">Minibus Ejecutivo</div>
-          <div class="flota-desc">Ideal para ejecutivos, traslados al aeropuerto y reuniones corporativas pequenas en Santo Domingo.</div>
-          <div class="flota-features">
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>WiFi</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>A/C</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seguro</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Maletero</span>
-          </div>
-        </div>
-      </div>
-      <div class="flota-card fade-in">
-        <div class="flota-img" style="background-image:url('bus-30.jpg')" role="img" aria-label="Bus mediano 30 pasajeros alquiler empresarial Santo Domingo RD"></div>
-        <div class="flota-info">
-          <div class="flota-cap">30 <span>pasajeros</span></div>
-          <div class="flota-name">Bus Mediano</div>
-          <div class="flota-desc">Perfecto para traslado de personal, excursiones grupales y eventos medianos en Republica Dominicana.</div>
-          <div class="flota-features">
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>WiFi</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>A/C</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seguro</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg>Reclinables</span>
-          </div>
-        </div>
-      </div>
-      <div class="flota-card fade-in">
-        <div class="flota-img" style="background-image:url('bus-50.jpg')" role="img" aria-label="Bus gran capacidad 50 pasajeros eventos corporativos Santo Domingo"></div>
-        <div class="flota-info">
-          <div class="flota-cap">50 <span>pasajeros</span></div>
-          <div class="flota-name">Bus Gran Capacidad</div>
-          <div class="flota-desc">La opcion para convenciones, giras nacionales y grandes grupos empresariales en toda la RD.</div>
-          <div class="flota-features">
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>WiFi</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>A/C</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seguro</span>
-            <span class="ff"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Maletero amplio</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VENTAJAS -->
-<section>
-  <div class="container fade-in">
-    <div class="section-label">Beneficios reales</div>
-    <h2 class="section-title">Lo que resolvemos<br><em>por tu empresa</em></h2>
-    <div class="divider"></div>
-    <div class="ventajas-grid">
-      <div class="ventaja fade-in"><div class="v-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h4>Compromiso con la puntualidad</h4><p>Nuestros clientes nos eligen de nuevo justamente por esto. Cumplir el horario es uno de nuestros valores operativos mas solidos.</p></div></div>
-      <div class="ventaja fade-in"><div class="v-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h4>Protocolos de seguridad activos</h4><p>Conductores capacitados, vehiculos con seguro de pasajeros vigente y procedimientos de emergencia en cada ruta.</p></div></div>
-      <div class="ventaja fade-in"><div class="v-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h4>Ahorro real para tu empresa</h4><p>Centralizar el transporte elimina gastos de taxis y combustible, y libera tiempo administrativo de tu equipo de RRHH.</p></div></div>
-      <div class="ventaja fade-in"><div class="v-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h4>Atencion directa por WhatsApp</h4><p>Sin call centers. Coordinacion directa con nuestro equipo para cambios de ultima hora, rutas adicionales o cualquier necesidad.</p></div></div>
-      <div class="ventaja fade-in"><div class="v-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h4>Facturacion con NCF</h4><p>Emitimos comprobantes fiscales para que tu empresa justifique el gasto correctamente ante la DGII sin inconvenientes.</p></div></div>
-      <div class="ventaja fade-in"><div class="v-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><h4>Cobertura en todo el pais</h4><p>Operamos desde Santo Domingo hacia cualquier destino en RD: Punta Cana, La Romana, Puerto Plata, Samana, Jarabacoa y mas.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- GERENTE -->
-<section class="bg-navy">
-  <div class="container">
-    <div class="gerente-inner">
-      <div class="gerente-text fade-in">
-        <div class="section-label">Liderazgo y vision</div>
-        <h2 class="section-title">Atencion personalizada<br>desde <em>la gerencia</em></h2>
-        <div class="divider"></div>
-        <p class="section-sub">En Amalfi, la gerencia supervisa operativamente cada servicio. No somos un intermediario: somos el equipo que ejecuta y responde directamente por cada traslado.</p>
-        <a href="#cotizar" class="btn-primary" style="margin-top:1.5rem;display:inline-block">Hablar con nuestro equipo &rarr;</a>
-      </div>
-      <div class="gerente-card fade-in">
-        <p class="gerente-quote">"Nuestro proposito es que el traslado sea parte de la experiencia inolvidable de nuestros clientes. Cada detalle importa: desde el primer contacto, hasta el ultimo kilometro del viaje."</p>
-        <div class="gerente-ventajas">
-          <div class="gv">Supervision operativa directa en cada servicio</div>
-          <div class="gv">Respuesta rapida ante cualquier imprevisto</div>
-          <div class="gv">Atencion personalizada para clientes corporativos</div>
-          <div class="gv">Compromiso con la experiencia del pasajero</div>
-        </div>
-        <div class="gerente-info">
-          <img src="gerente.jpg" alt="Gerencia General Transporte Empresarial Amalfi SRL Santo Domingo" class="gerente-avatar"/>
-          <div>
-            <div class="gerente-name">Gerencia General</div>
-            <div class="gerente-role">Transporte Empresarial Amalfi SRL</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GALERIA -->
-<!--
-  FOTOS REALES: Sube a GitHub con estos nombres exactos:
-  galeria-1.jpg  galeria-2.jpg  galeria-3.jpg
-  galeria-4.jpg  galeria-5.jpg  galeria-6.jpg
--->
-<section class="bg-off">
-  <div class="container fade-in">
-    <div class="section-label">En accion</div>
-    <h2 class="section-title">Momentos que<br><em>hablan por nosotros</em></h2>
-    <div class="divider"></div>
-    <p class="section-sub">Cada viaje es una experiencia. Aqui algunos de los servicios que hemos realizado con orgullo para empresas y grupos en toda la Republica Dominicana.</p>
-    <div class="galeria-grid">
-      <div class="galeria-item fade-in"><img src="galeria-1.jpg" alt="Excursion grupal Transporte Empresarial Amalfi Santo Domingo"/></div>
-      <div class="galeria-item fade-in"><img src="galeria-2.jpg" alt="Evento corporativo transporte Amalfi Republica Dominicana"/></div>
-      <div class="galeria-item fade-in"><img src="galeria-3.jpg" alt="Bus ejecutivo Transporte Amalfi clientes satisfechos"/></div>
-      <div class="galeria-item fade-in"><img src="galeria-4.jpg" alt="Traslado de personal empresarial Santo Domingo RD"/></div>
-      <div class="galeria-item fade-in"><img src="galeria-5.jpg" alt="Gira nacional alquiler de autobuses Republica Dominicana"/></div>
-      <div class="galeria-item fade-in"><img src="galeria-6.jpg" alt="Transporte corporativo empresas Santo Domingo Amalfi"/></div>
-    </div>
-  </div>
-</section>
-
-<!-- RESEÑAS -->
-<section id="reseñas">
-  <div class="container fade-in">
-    <div class="section-label">Lo que dicen nuestros clientes</div>
-    <h2 class="section-title">Mas de 1,000 clientes<br><em>confian en Amalfi</em></h2>
-    <div class="divider"></div>
-    <div class="reviews-header">
-      <div class="google-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <div><div class="badge-score">4.7</div><div class="badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="badge-count">51 opiniones verificadas en Google</div></div>
-      </div>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card fade-in"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="review-meta">Hace 14 semanas</div><p class="review-text">"Muy puntuales y sin contratiempos en la trayectoria. Choferes corteses y amables. Muy educados."</p><div class="reviewer"><div class="r-avatar">PG</div><div><div class="r-name">Palsiri Guzman Batista</div><div class="r-source"><span class="gdot"></span> Google Reviews &middot; Verificado</div></div></div></div>
-      <div class="review-card fade-in"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="review-meta">Hace 24 semanas</div><p class="review-text">"Muy buen servicio, puntual y muy decentes sus choferes, he hecho diferentes actividades con ustedes y siempre vuelvo a elegirlos por su calidad."</p><div class="reviewer"><div class="r-avatar">ED</div><div><div class="r-name">Elvis Duarte</div><div class="r-source"><span class="gdot"></span> Google Reviews &middot; Verificado</div></div></div></div>
-      <div class="review-card fade-in"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="review-meta">Hace 37 semanas</div><p class="review-text">"Esta empresa vale 100% cada centavo. Estan pendientes del mas minimo detalle. El chofer, una estrella de persona. Definitivamente volveria a contratar sus servicios."</p><div class="reviewer"><div class="r-avatar">MB</div><div><div class="r-name">Marcel Batista</div><div class="r-source"><span class="gdot"></span> Google Reviews &middot; Verificado</div></div></div></div>
-      <div class="review-card fade-in"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="review-meta">Feb 2025 &middot; Local Guide</div><p class="review-text">"Excelente servicio, chofer muy experimentado, y el autobus tenia internet y un excelente aire acondicionado."</p><div class="reviewer"><div class="r-avatar">ME</div><div><div class="r-name">Mario Encarnacion</div><div class="r-source"><span class="gdot"></span> Google Reviews &middot; Local Guide</div></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="bg-off" id="faq">
-  <div class="container fade-in">
-    <div class="section-label">Resolvemos tus dudas</div>
-    <h2 class="section-title">Preguntas <em>frecuentes</em></h2>
-    <div class="divider"></div>
-    <p class="section-sub">Respuestas directas a lo que mas preguntan los responsables de logistica y recursos humanos antes de contratar transporte corporativo en Santo Domingo.</p>
-    <div class="faq-grid">
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Tienen seguro de pasajeros? <span class="faq-arrow">&#9660;</span></button><div class="faq-a"><p>Si. Todos los vehiculos cuentan con seguro de responsabilidad civil y seguro de pasajeros vigente, cumpliendo con las normativas del INTRANT en Republica Dominicana.</p></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Trabajan fines de semana y feriados? <span class="faq-arrow">&#9660;</span></button><div class="faq-a"><p>Si, operamos los 7 dias de la semana incluidos feriados. Muchas excursiones y eventos ocurren precisamente en esos dias. Reserva con anticipacion para garantizar disponibilidad.</p></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Que metodos de pago aceptan? <span class="faq-arrow">&#9660;</span></button><div class="faq-a"><p>Aceptamos transferencias bancarias, depositos y efectivo. Para clientes corporativos emitimos factura con NCF para justificacion ante la DGII. Consulta opciones al cotizar.</p></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Los buses tienen WiFi y aire acondicionado? <span class="faq-arrow">&#9660;</span></button><div class="faq-a"><p>Si. Toda la flota cuenta con WiFi a bordo y aire acondicionado para que los pasajeros viajen comodos y conectados durante el trayecto.</p></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Con cuanto tiempo debo reservar? <span class="faq-arrow">&#9660;</span></button><div class="faq-a"><p>Recomendamos minimo 48 horas. Para eventos grandes o temporadas altas (Semana Santa, Navidad, verano) lo ideal es reservar con una semana o mas de anticipacion.</p></div></div>
-      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">Viajan fuera de Santo Domingo? <span class="faq-arrow">&#9660;</span></button><div class="faq-a"><p>Si, operamos en todo el territorio nacional: Punta Cana, La Romana, Puerto Plata, Samana, Jarabacoa y mas. El precio varia segun destino y duracion del servicio.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FORMULARIO -->
-<section class="bg-navy" id="cotizar">
-  <div class="container">
-    <div class="form-inner">
-      <div class="form-text fade-in">
-        <div class="section-label">Cotizacion rapida</div>
-        <h2 class="section-title" style="color:var(--white)">Cuantanos tu necesidad,<br><em>te respondemos hoy</em></h2>
-        <div class="divider"></div>
-        <p class="section-sub">Completa el formulario y la IA redactara un mensaje personalizado que se enviara directamente a nuestro WhatsApp. Respondemos tipicamente en menos de 24 horas.</p>
-        <div class="form-hi-list">
-          <div class="form-hi"><div class="form-hi-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Respuesta tipica en menos de 24 horas</div>
-          <div class="form-hi"><div class="form-hi-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Sin compromiso de contratacion</div>
-          <div class="form-hi"><div class="form-hi-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Facturacion con NCF disponible</div>
-          <div class="form-hi"><div class="form-hi-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>Atencion personalizada por WhatsApp</div>
-        </div>
-      </div>
-      <div class="fade-in">
-        <div class="contact-form">
-          <h3>Solicitar cotizacion</h3>
-          <p>Al hacer clic en el boton, se abrira WhatsApp con tu mensaje ya redactado por IA.</p>
-          <div class="form-row">
-            <div class="form-group"><label for="nombre">Nombre *</label><input type="text" id="nombre" placeholder="Tu nombre" required/></div>
-            <div class="form-group"><label for="telefono">Telefono / WhatsApp *</label><input type="tel" id="telefono" placeholder="809-000-0000" required/></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="email">Correo electronico</label><input type="email" id="email" placeholder="tucorreo@empresa.com"/></div>
-            <div class="form-group"><label for="empresa">Empresa o institucion</label><input type="text" id="empresa" placeholder="Nombre de tu empresa"/></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="fecha">Fecha del servicio</label><input type="date" id="fecha"/></div>
-            <div class="form-group"><label for="hora">Hora de salida</label><input type="time" id="hora"/></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="origen">Origen</label><input type="text" id="origen" placeholder="Punto de partida"/></div>
-            <div class="form-group"><label for="destino">Destino</label><input type="text" id="destino" placeholder="Punto de llegada"/></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="personas">Cantidad de personas</label>
-              <select id="personas"><option value="">Selecciona</option><option>1 – 15 personas</option><option>16 – 30 personas</option><option>31 – 50 personas</option><option>Mas de 50 personas</option></select>
+                <button class="md:hidden text-white p-2" onclick="toggleMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
             </div>
-            <div class="form-group"><label for="viaje">Tipo de viaje</label>
-              <select id="viaje"><option value="">Selecciona</option><option>Solo ida</option><option>Ida y vuelta</option><option>Servicio diario / recurrente</option></select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label for="servicio">Tipo de servicio</label>
-              <select id="servicio"><option value="">Selecciona</option><option>Transporte corporativo</option><option>Traslado de personal</option><option>Evento / Convencion</option><option>Excursion / Paseo</option><option>Traslado al aeropuerto</option><option>Gira nacional</option><option>Otro</option></select>
-            </div>
-            <div class="form-group"><label for="cliente">Tipo de cliente</label>
-              <select id="cliente"><option value="">Selecciona</option><option>Empresa / Corporativo</option><option>Evento privado</option><option>Grupo personal o familiar</option><option>Institucion educativa</option></select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label><input type="checkbox" id="ncf" style="width:auto;margin-right:6px"/>Requiero factura con NCF (comprobante fiscal)</label>
-          </div>
-          <div class="form-group"><label for="mensaje">Detalles adicionales</label><textarea id="mensaje" placeholder="Cualquier informacion relevante sobre tu servicio..."></textarea></div>
-          <button class="btn-form" id="btnEnviar" onclick="enviarFormulario()">Continuar por WhatsApp con IA &rarr;</button>
-          <div class="btn-loading" id="btnLoading">&#10022; &nbsp;La IA esta redactando tu mensaje...</div>
-          <p class="form-note">Tu informacion es confidencial y solo se usara para contactarte.</p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto">
-  <div class="container">
-    <div class="mapa-inner">
-      <div class="fade-in">
-        <div class="section-label">Donde estamos</div>
-        <h2 class="section-title">Visitanos en<br><em>Santo Domingo</em></h2>
-        <div class="divider"></div>
-        <p class="section-sub">Estamos en la Av. Monumental #6, Santo Domingo. Contactanos y con gusto te asesoramos sin compromiso.</p>
-        <div class="contact-items">
-          <div class="contact-item"><div class="c-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="c-label">Direccion</div><div class="c-value">Av. Monumental #6, Santo Domingo, RD</div></div></div>
-          <div class="contact-item"><div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="c-label">Telefono</div><div class="c-value"><a href="tel:+18095603012">(809) 560-3012</a></div></div></div>
-          <div class="contact-item"><div class="c-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-label">Correo</div><div class="c-value"><a href="mailto:administracion@transporteamalfi.com">administracion@transporteamalfi.com</a></div></div></div>
-          <div class="contact-item"><div class="c-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="c-label">Sitio web</div><div class="c-value"><a href="https://www.transporteamalfi.com" target="_blank" rel="noopener noreferrer">www.transporteamalfi.com</a></div></div></div>
-          <div class="contact-item"><div class="c-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><div class="c-label">Cotizaciones</div><div class="c-value"><a href="https://cotizacion.transporteamalfi.com/" target="_blank" rel="noopener noreferrer">cotizacion.transporteamalfi.com</a></div></div></div>
+        <div id="mobile-menu" class="hidden md:hidden bg-amalfi-navy border-t border-amalfi-gold/20 p-4 space-y-4">
+            <a href="#servicios" onclick="toggleMenu()" class="block text-white text-center py-2">Servicios</a>
+            <a href="#flota" onclick="toggleMenu()" class="block text-white text-center py-2">Nuestra Flota</a>
+            <a href="https://cotizacion.transporteamalfi.com/" target="_blank" class="block bg-amalfi-gold text-amalfi-navy text-center py-3 rounded-xl font-bold">Cotizar en Línea</a>
         </div>
-      </div>
-      <div class="map-frame fade-in">
-        <iframe src="https://maps.google.com/maps?q=Avenida+Monumental+6,+Santo+Domingo+de+Guzman,+Distrito+Nacional,+Dominican+Republic&output=embed&hl=es&z=17" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicacion Transporte Empresarial Amalfi en Santo Domingo RD"></iframe>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 hero-gradient overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="bus-principal.jpg" alt="Unidad principal de Transporte Amalfi" class="w-full h-full object-cover opacity-30">
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-amalfi-gold/10 border border-amalfi-gold/30 text-amalfi-gold text-xs font-bold uppercase tracking-widest mb-6">Logística líder en República Dominicana</span>
+                    <h1 class="text-white font-serif text-5xl lg:text-7xl leading-tight mb-6">
+                        Movilidad que impulsa su <span class="italic text-amalfi-gold">empresa</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg lg:text-xl mb-10 max-w-2xl font-light">
+                        Puntualidad garantizada y confort premium. Transportamos lo más valioso de su negocio: su equipo humano.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://cotizacion.transporteamalfi.com/" target="_blank" class="px-8 py-4 bg-amalfi-gold hover:bg-amalfi-goldLight text-amalfi-navy font-bold rounded-xl transition-all shadow-xl text-center">Solicitar Presupuesto</a>
+                        <a href="https://wa.me/18099885237" target="_blank" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all border border-white/30 backdrop-blur-sm text-center">Hablar por WhatsApp</a>
+                    </div>
+                </div>
+                <div class="hidden lg:block relative group">
+                    <div class="relative w-full h-[500px] bg-slate-800 rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+                        <img src="bus-principal.jpg" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" alt="Flota Amalfi Real">
+                        <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-amalfi-navy to-transparent">
+                            <p class="text-white text-sm font-medium">Unidades impecables y seguras para cada colaborador.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="bg-white py-10 border-b">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">+1,000</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Clientes Corporativos</span></div>
+            <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">4.8 ★</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Google Reviews</span></div>
+            <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">100%</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Puntualidad</span></div>
+            <div><span class="block text-3xl font-serif text-amalfi-navy font-bold">24/7</span><span class="text-xs uppercase tracking-widest text-slate-500 font-bold">Asistencia</span></div>
+        </div>
     </div>
-  </div>
-</section>
 
-<!-- CTA FINAL -->
-<section class="cta-final">
-  <div class="container fade-in">
-    <div class="section-label">Listo para empezar?</div>
-    <h2 class="section-title">Tu empresa merece<br><em>un transporte a su nivel</em></h2>
-    <div class="divider"></div>
-    <p>Contactanos ahora y recibe una propuesta personalizada. Sin compromiso, sin letras pequenas.</p>
-    <a href="#cotizar" class="btn-primary" style="font-size:15px;padding:18px 44px">Obtener cotizacion gratis &rarr;</a>
-  </div>
-</section>
+    <!-- Sectores Section -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Sectores Clave</h2>
+                <h3 class="font-serif text-4xl text-amalfi-navy">Experiencia en diversas industrias</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
+                    <span class="text-3xl">🏭</span>
+                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Industria & Manufactura</span>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
+                    <span class="text-3xl">📦</span>
+                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Comercio & Distribución</span>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
+                    <span class="text-3xl">🕊️</span>
+                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Sector Religioso & ONG</span>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
+                    <span class="text-3xl">🎓</span>
+                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Sector Educativo</span>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
+                    <span class="text-3xl">🏨</span>
+                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Hotelería & Turismo</span>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center justify-center gap-3">
+                    <span class="text-3xl">✨</span>
+                    <span class="text-xs font-bold text-slate-600 leading-tight uppercase tracking-tighter">Organización de Eventos</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  <p>&copy; <span id="footerYear"></span> Transporte Empresarial Amalfi SRL &middot; Santo Domingo, Republica Dominicana</p>
-  <p style="margin-top:.5rem"><a href="https://www.transporteamalfi.com" rel="noopener noreferrer">www.transporteamalfi.com</a> &nbsp;&middot;&nbsp; Transporte corporativo y alquiler de autobuses en Santo Domingo, RD</p>
-</footer>
+    <!-- Services Grid -->
+    <section id="servicios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Servicios Especializados</h2>
+                <h3 class="font-serif text-4xl text-amalfi-navy">Soluciones a su medida</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
+                    <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center text-amalfi-gold mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Traslado de Personal</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Rutas programadas con monitoreo en tiempo real. Máxima puntualidad para turnos rotativos y zonas industriales.</p>
+                </div>
+                <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
+                    <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center text-amalfi-gold mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Transporte Ejecutivo</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Servicio VIP para directivos y socios. Vehículos impecables y choferes discretos altamente capacitados.</p>
+                </div>
+                <div class="p-8 rounded-3xl border border-slate-100 bg-slate-50 card-hover">
+                    <div class="w-14 h-14 bg-amalfi-gold/10 rounded-xl flex items-center justify-center text-amalfi-gold mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Eventos & Convenciones</h4>
+                    <p class="text-slate-500 font-light leading-relaxed">Coordinación logística para grupos grandes. Nos encargamos de que todo el personal llegue a su destino unido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="https://wa.me/message/IV6KUI5H34MJC1" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar Transporte Empresarial Amalfi por WhatsApp">
-  <div class="wa-pulse"></div>
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+    <!-- Flota Section Actualizada y Honesta -->
+    <section id="flota" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Nuestra Flota</h2>
+                <h3 class="font-serif text-4xl text-amalfi-navy mb-4">Unidades seguras para cada necesidad</h3>
+                <p class="text-slate-500 max-w-3xl mx-auto">En Transporte Amalfi contamos con una flota moderna diseñada para adaptarse a usted, desde traslados ejecutivos hasta transporte masivo.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Toyota Hiace -->
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                    <div class="h-56 bg-amalfi-navy relative overflow-hidden">
+                        <img src="bus-15.jpg" class="w-full h-full object-cover" alt="Toyota Hiace Amalfi">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-1">Toyota Hiace</h4>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-widest">12–15 Pasajeros</span>
+                        <p class="text-sm text-slate-500 my-4">Líder en fiabilidad y confort. Ideal para traslados ejecutivos y movilidad ágil en zonas urbanas.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20me%20gustaría%20cotizar%20la%20Toyota%20Hiace%20(15%20pax)" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors">Consultar disponibilidad →</a>
+                    </div>
+                </div>
+                <!-- Toyota Coaster -->
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                    <div class="h-56 bg-amalfi-navy relative overflow-hidden">
+                        <img src="bus-30.jpg" class="w-full h-full object-cover" alt="Toyota Coaster Amalfi">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-1">Toyota Coaster</h4>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-widest">25–30 Pasajeros</span>
+                        <p class="text-sm text-slate-500 my-4">Perfecto para transporte empresarial y eventos grupales. Destaca por su durabilidad, seguridad y comodidad.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20me%20gustaría%20cotizar%20la%20Toyota%20Coaster%20(30%20pax)" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors">Consultar disponibilidad →</a>
+                    </div>
+                </div>
+                <!-- Grandes Grupos -->
+                <div class="card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
+                    <div class="h-56 bg-amalfi-navy relative overflow-hidden">
+                        <img src="bus-50.jpg" class="w-full h-full object-cover" alt="Bus 50 pasajeros Amalfi">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl mb-1">Hyundai / Kia</h4>
+                        <span class="text-amalfi-gold text-xs font-bold uppercase tracking-widest">40–50 Pasajeros</span>
+                        <p class="text-sm text-slate-500 my-4">Categoría ejecutiva para trayectos largos. Asientos ergonómicos, A/C y máxima estabilidad en carretera.</p>
+                        <a href="https://wa.me/18099885237?text=Hola,%20me%20gustaría%20cotizar%20una%20unidad%20de%2050%20pasajeros" class="text-amalfi-navy font-bold text-sm hover:text-amalfi-gold transition-colors">Consultar disponibilidad →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-// Footer year dinamico
-document.getElementById('footerYear').textContent = new Date().getFullYear();
+    <!-- Testimonios Section -->
+    <section id="testimonios" class="py-24 bg-amalfi-navy text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Google Reviews</h2>
+                <h3 class="font-serif text-4xl">Confianza que se mueve con usted</h3>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amalfi-gold text-lg mb-4">★★★★★</div>
+                        <p class="italic font-light leading-relaxed text-gray-200">"Muy puntuales y sin contratiempos. Choferes corteses y amables. Muy educados."</p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">PG</div>
+                        <div>
+                            <div class="font-bold text-sm">Palsiri Guzman</div>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest">Reseña Verificada</div>
+                        </div>
+                    </div>
+                </div>
 
-// Menu
-function toggleMenu(){
-  const m=document.getElementById('mobileMenu');
-  const o=document.getElementById('overlay');
-  const h=document.querySelector('.hamburger');
-  const isOpen=m.classList.contains('open');
-  m.classList.toggle('open');
-  o.classList.toggle('open');
-  h.setAttribute('aria-expanded', !isOpen);
-  document.body.style.overflow=isOpen?'':'hidden';
-}
-function closeMenu(){
-  document.getElementById('mobileMenu').classList.remove('open');
-  document.getElementById('overlay').classList.remove('open');
-  document.querySelector('.hamburger').setAttribute('aria-expanded','false');
-  document.body.style.overflow='';
-}
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amalfi-gold text-lg mb-4">★★★★★</div>
+                        <p class="italic font-light leading-relaxed text-gray-200">"Esta empresa vale 100% cada centavo. Estan pendientes del mas minimo detalle. El chofer, una estrella de persona."</p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">MB</div>
+                        <div>
+                            <div class="font-bold text-sm">Marcel Batista</div>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest">Reseña Verificada</div>
+                        </div>
+                    </div>
+                </div>
 
-// Scroll suave
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-80,behavior:'smooth'})}
-  })
-})
+                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amalfi-gold text-lg mb-4">★★★★★</div>
+                        <p class="italic font-light leading-relaxed text-gray-200">"Excelente servicio, chofer experimentado, y el autobus tenia internet y un excelente aire acondicionado."</p>
+                    </div>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold">ME</div>
+                        <div>
+                            <div class="font-bold text-sm">Mario Encarnacion</div>
+                            <div class="text-[10px] text-gray-400 uppercase tracking-widest">Local Guide</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// Fade in scroll
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
-},{threshold:0.1});
-document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+    <!-- Ubicación Section -->
+    <section id="ubicacion" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-amalfi-gold font-bold tracking-widest text-sm uppercase mb-3">Ubicación</h2>
+                    <h3 class="font-serif text-4xl text-amalfi-navy mb-6">En el corazón de Santo Domingo</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">Visítenos en nuestras oficinas corporativas o coordine una reunión para diseñar su plan de logística personalizada.</p>
+                    <div class="space-y-4 text-slate-700">
+                        <p class="flex items-center gap-3">📍 Santo Domingo, República Dominicana</p>
+                        <p class="flex items-center gap-3">📞 +1 (809) 988-5237</p>
+                        <p class="flex items-center gap-3">✉️ info@transporteamalfi.com</p>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-2xl border border-slate-100 h-[450px]">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Transporte+Empresarial+Amalfi+Santo+Domingo+Republica+Dominicana&output=embed&hl=es&z=16"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// FAQ
-function toggleFaq(btn){
-  const ans=btn.nextElementSibling;
-  const isOpen=ans.classList.contains('open');
-  document.querySelectorAll('.faq-a.open').forEach(a=>a.classList.remove('open'));
-  document.querySelectorAll('.faq-q.open').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false')});
-  if(!isOpen){ans.classList.add('open');btn.classList.add('open');btn.setAttribute('aria-expanded','true')}
-}
+    <!-- Footer -->
+    <footer class="bg-amalfi-navy pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-6">
+                        <img src="logo.png" alt="Amalfi Logo Footer" class="h-10 w-auto brightness-0 invert">
+                        <span class="text-white font-bold text-xl uppercase tracking-tighter">Amalfi</span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm mx-auto md:mx-0 font-light mb-6 leading-relaxed">Aliado estratégico en movilidad para el empresariado dominicano. Conectamos su empresa con la puntualidad.</p>
+                    
+                    <div class="bg-white/5 p-4 rounded-2xl border border-white/10 inline-block">
+                        <p class="text-white text-[10px] font-bold mb-2 uppercase tracking-[0.2em]">Síguenos en Instagram</p>
+                        <a href="https://instagram.com/transporteamalfi?igshid=NDA1YzNhOGU=" target="_blank" class="flex items-center gap-3 text-amalfi-gold hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.607.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.365-.333 2.632-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.063-1.365.333-2.632 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.668-.072-4.948-.197-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            <span class="font-bold text-xs">@transporteamalfi</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6 text-xs uppercase tracking-widest">Empresa</h6>
+                    <ul class="text-gray-400 space-y-4 text-sm font-light">
+                        <li><a href="#servicios" class="hover:text-amalfi-gold transition-colors">Servicios</a></li>
+                        <li><a href="#flota" class="hover:text-amalfi-gold transition-colors">Nuestra Flota</a></li>
+                        <li><a href="https://cotizacion.transporteamalfi.com/" class="hover:text-amalfi-gold transition-colors">Cotizar en Línea</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="text-white font-bold mb-6 text-xs uppercase tracking-widest">Soporte</h6>
+                    <ul class="text-gray-400 space-y-4 text-sm font-light">
+                        <li>📍 Santo Domingo, RD</li>
+                        <li>📞 +1 (809) 988-5237</li>
+                        <li>✉️ info@transporteamalfi.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 text-center">
+                <p class="text-gray-600 text-[10px] tracking-widest uppercase">© 2025 Transporte Empresarial Amalfi SRL. Hecho en RD 🇩🇴</p>
+            </div>
+        </div>
+    </footer>
 
-// Formulario con IA
-async function enviarFormulario(){
-  const n=document.getElementById('nombre').value.trim();
-  const t=document.getElementById('telefono').value.trim();
-  if(!n){alert('Por favor ingresa tu nombre.');return}
-  if(!t){alert('Por favor ingresa tu telefono o WhatsApp.');return}
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/18099885237" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-[100] flex items-center justify-center">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.348.223-.645.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.482-1.76-1.654-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+    </a>
 
-  const campos={
-    nombre:n, telefono:t,
-    email:document.getElementById('email').value.trim(),
-    empresa:document.getElementById('empresa').value.trim(),
-    fecha:document.getElementById('fecha').value,
-    hora:document.getElementById('hora').value,
-    origen:document.getElementById('origen').value.trim(),
-    destino:document.getElementById('destino').value.trim(),
-    personas:document.getElementById('personas').value,
-    viaje:document.getElementById('viaje').value,
-    servicio:document.getElementById('servicio').value,
-    cliente:document.getElementById('cliente').value,
-    ncf:document.getElementById('ncf').checked,
-    mensaje:document.getElementById('mensaje').value.trim()
-  };
-
-  document.getElementById('btnEnviar').style.display='none';
-  document.getElementById('btnLoading').style.display='block';
-
-  const resumen=Object.entries(campos).filter(([k,v])=>v&&v!==false).map(([k,v])=>`${k}: ${k==='ncf'?'Si requiere NCF':v}`).join(' | ');
-
-  let txt='';
-  try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:1000,
-        system:`Eres un asistente que redacta mensajes de WhatsApp en espanol (sin acentos ni caracteres especiales) para clientes que solicitan cotizacion de transporte corporativo a Transporte Empresarial Amalfi en Santo Domingo, Republica Dominicana.
-Redacta un mensaje natural, cordial y directo de no mas de 140 palabras que:
-- Salude amablemente
-- Se presente con nombre y empresa si la hay
-- Indique los detalles del servicio de forma clara y ordenada
-- Solicite la cotizacion
-- Suene como una persona real, no un formulario
-- Si requiere NCF, mencionarlo al final
-Responde SOLO con el mensaje, sin comillas ni explicaciones.`,
-        messages:[{role:'user',content:`Genera el mensaje con estos datos: ${resumen}`}]
-      })
-    });
-    const data=await res.json();
-    txt=data.content[0].text.trim();
-  }catch(e){
-    txt=`Hola! Soy ${n}${campos.empresa?' de '+campos.empresa:''} y me gustaria solicitar una cotizacion de transporte.${campos.servicio?' Servicio: '+campos.servicio+'.':''}${campos.personas?' Somos '+campos.personas+'.':''}${campos.origen&&campos.destino?' Ruta: '+campos.origen+' a '+campos.destino+'.':''}${campos.fecha?' Fecha: '+campos.fecha+'.':''}${campos.hora?' Hora: '+campos.hora+'.':''}${campos.viaje?' Viaje: '+campos.viaje+'.':''}${campos.mensaje?' Detalle: '+campos.mensaje+'.':''} Mi contacto: ${t}${campos.email?' / '+campos.email:''}.${campos.ncf?' Requiero factura con NCF.':''} Gracias!`;
-  }
-
-  document.getElementById('btnEnviar').style.display='block';
-  document.getElementById('btnLoading').style.display='none';
-  window.open('https://wa.me/message/IV6KUI5H34MJC1?text='+encodeURIComponent(txt),'_blank','noopener,noreferrer');
-}
-</script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>
